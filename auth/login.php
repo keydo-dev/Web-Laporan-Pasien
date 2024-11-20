@@ -20,37 +20,46 @@ if (isset($_SESSION['login'])) {
 </head>
 
 
-<body class="bg-gray-200 font-sans text-gray-700">
-    <div class="container mx-auto p-8 flex">
+<body class="bg-gradient-to-r from-green-600 to-gray-800 font-sans text-gray-700">
+    <div class="container mt-32 mx-auto p-8 flex items-center">
         <div class="max-w-md w-full mx-auto">
             <div class="container flex flex-col justify-center items-center">
-                <img src="../assets/images/logo.png " class="mr-3 w-1/4" alt="Logo" />
-                <span class="bg-gradient-to-r text-transparent from-green-500 to-black bg-clip-text">
-                    <h1 class="text-4xl text-center mb-12 font-bold ">Login lur</h1>
-                </span>
-
+                <h1 class="text-4xl text-center mb-12 font-bold text-white">Login</h1>
             </div>
 
-            <div class="bg-white rounded-lg overflow-hidden shadow-2xl">
-                <div class="p-8">
-                    <form method="POST" action="../utils/auth.php">
-                        <div class="mb-5">
-                            <input placeholder="Username" type="text" name="username" class="block w-full p-3 rounded bg-gray-200 border border-transparent focus:outline-none">
+            <div class="container flex justify-center">
+                <div class="w-fit flex items-center justify-center">
+                    <div class="w-96 h-72 flex justify-center flex-col bg-white rounded-s-lg overflow-hidden shadow-2xl">
+                        <div class="p-8">
+                            <h3 class="mb-5 text-gray-400">Sign In<span class="text-red-800">*</span></h3>
+                            <form method="POST" action="../utils/auth.php">
+                                <div class="mb-5">
+                                    <input placeholder="Username" type="text" name="username" class="block w-full p-3 rounded bg-gray-200 border border-transparent focus:outline-none">
+                                </div>
+
+                                <div class="mb-5">
+                                    <input placeholder="*********" type="password" name="password" class="block w-full p-3 rounded bg-gray-200 border border-transparent focus:outline-none">
+                                </div>
+
+                                <button type="submit" name="login" class="w-full p-3 mt-4 rounded-lg text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium text-sm dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Login</button>
+                            </form>
                         </div>
 
-                        <div class="mb-5">
-                            <input placeholder="*********" type="password" name="password" class="block w-full p-3 rounded bg-gray-200 border border-transparent focus:outline-none">
-                        </div>
+                        <?php
+                        if (isset($_GET['notification'])) {
+                            echo $_GET['notification'];
+                        }
+                        ?>
+                    </div>
 
-                        <button type="submit" name="login" class="w-full p-3 mt-4 bg-blue-500 text-white rounded shadow hover:bg-blue-600">Login</button>
-                    </form>
+                    <div class="w-96 h-72 flex justify-center flex-col bg-gradient-to-l from-green-800 to-green-600 rounded-e-lg text-white overflow-hidden shadow-2xl">
+                        <div class="p-8 flex justify-center items-center flex-col">
+                            <h1 class="font-bold text-xl">Welcome To Helathcare</h1>
+                            <p class="text-center">Jika kamu ingin membuat laporan keluhan Login terlebih dahu👌</p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <?php
-                if (isset($_GET['notification'])) {
-                    echo $_GET['notification'];
-                }
-                ?>
             </div>
         </div>
     </div>

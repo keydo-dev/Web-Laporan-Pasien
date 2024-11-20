@@ -19,7 +19,7 @@ header('refresh:3;Content-Type: text/html; charset=UTF-8');
                 $report['content'] = html_entity_decode(html_entity_decode(strval($report['content'])));
 
             ?>
-                <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-fit mb-4">
+                <div class="bg-white rounded-lg h-fit mb-4">
                     <a href="index.php?page=detail&id=<?= $report['id'] ?>" class="block h-full">
                         <div class="max-w-full border border-gray-200 rounded-lg shadow h-full flex flex-col">
                             <?php if ($report['thumbnail']): ?>
@@ -44,7 +44,7 @@ header('refresh:3;Content-Type: text/html; charset=UTF-8');
     </div>
 
     <!-- Breaking News (Right Side) -->
-    <div class="border-blue-600 border-4 rounded-lg shadow h-fit flex flex-col justify-between col-span-1 md:col-span-1 hidden md:block">
+    <div class="border-black border-4 rounded-lg shadow h-fit flex-col justify-between col-span-1 md:col-span-1 hidden md:block">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-600">Breaking News!!</h5>
         </div>
@@ -52,7 +52,7 @@ header('refresh:3;Content-Type: text/html; charset=UTF-8');
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-600">Checkout DEV++</h5>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Invest in your developer career with our value-maximizing membership program.</p>
-            <button class="w-full outline-blue-500 outline rounded text-blue-500 font-normal text-lg p-1 hover:bg-blue-500 hover:text-white hover:font-bold">Read more</button>
+            <button class="w-full outline-black outline rounded text-black font-normal text-lg p-1 hover:bg-green-500 hover:text-white hover:font-bold">Read more</button>
         </div>
     </div>
 

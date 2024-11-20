@@ -17,7 +17,7 @@ if ($role_name !== 'masyarakat') {
 
 <div class="relative overflow-x-auto sm:rounded-lg mt-10">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500" id="pagination-table">
-        <thead class="text-xs text-white uppercase bg-blue-600">
+        <thead class="text-xs text-white uppercase bg-green-600">
             <tr>
                 <th scope="col" class="px-6 py-3">
                     No.
@@ -44,7 +44,7 @@ if ($role_name !== 'masyarakat') {
         <tbody>
             <?php if (empty($reports)) : ?>
                 <tr>
-                    <td colspan="6" class="bg-blue-400 px-6 py-4 text-center text-white">
+                    <td colspan="6" class="bg-green-400 px-6 py-4 text-center text-white">
                         Data kosong
                     </td>
                 </tr>
@@ -52,7 +52,7 @@ if ($role_name !== 'masyarakat') {
                 $no = 1;
             ?>
                 <?php foreach ($reports as $report) : ?>
-                    <tr class="bg-blue-400 border-b hover:bg-blue-500 text-white">
+                    <tr class="bg-green-400 border-b hover:bg-green-500 text-white">
                         <td class="px-6 py-4 font-bold">
                             <?= $no++ ?>
                         </td>

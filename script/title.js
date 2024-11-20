@@ -1,5 +1,5 @@
-let titleText = "Lapor Heker - ";
-let speed = 300;
+let titleText = "Laporan Pasien-";
+let speed = 400;
 
 function scrollTitle() {
   document.title = titleText;
